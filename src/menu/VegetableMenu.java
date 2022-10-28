@@ -109,7 +109,7 @@ public class VegetableMenu {
             createVegetable();
         }
     }
-    public static void showSweets() throws IOException, ParseException {
+    public static void showVegetables() throws IOException, ParseException {
         Salad salad = Salad.getInstance();
         if (salad.size() == 0){
             System.out.println("There are no vegetables created.");}
