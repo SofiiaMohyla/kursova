@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="">
+    <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Salad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/VegetableMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/VegetableMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SaladTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/VegetableTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,54 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.test in kurs">
+    <configuration name="SaladTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kurs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SaladTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaladTest.testAddVegetables" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kurs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SaladTest" />
+      <option name="METHOD_NAME" value="testAddVegetables" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaladTest.testgetTotalWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kurs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SaladTest" />
+      <option name="METHOD_NAME" value="testgetTotalWeight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test in kurs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kurs" />
       <extension name="coverage">
@@ -75,6 +122,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.test in kurs" />
+        <item itemvalue="JUnit.SaladTest" />
+        <item itemvalue="JUnit.SaladTest.testAddVegetables" />
+        <item itemvalue="JUnit.SaladTest.testgetTotalWeight" />
       </list>
     </recent_temporary>
   </component>
@@ -89,8 +139,16 @@
       <workItem from="1666601282332" duration="1006000" />
       <workItem from="1666603159384" duration="6920000" />
       <workItem from="1666683194866" duration="2091000" />
-      <workItem from="1666951644483" duration="3397000" />
+      <workItem from="1666951644483" duration="12239000" />
     </task>
+    <task id="LOCAL-00001" summary="solve">
+      <created>1666955199679</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666955199679</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,8 +165,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="solve" />
+    <option name="LAST_COMMIT_MESSAGE" value="solve" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kurs$test_in_kurs.ic" NAME="test in kurs Coverage Results" MODIFIED="1666953891876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/kurs$test_in_kurs.ic" NAME="test in kurs Coverage Results" MODIFIED="1666974842803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/kurs$SaladTest_testAddVegetables.ic" NAME="SaladTest.testAddVegetables Coverage Results" MODIFIED="1666962822050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
     </SUITE>
   </component>

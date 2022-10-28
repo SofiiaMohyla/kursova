@@ -41,15 +41,15 @@ public class Salad {
     }
 
     public List<Vegetables> findByKalory(int min, int max) {
-        List<Vegetables> found_vegetavles = new ArrayList<>();
+        List<Vegetables> found_vegetables = new ArrayList<>();
         for (Vegetables p : listOfVegetables) {
             if (p.getKalory() >= min && p.getKalory() <= max) {
-                found_vegetavles.add(p);
+                found_vegetables.add(p);
                 System.out.println("Name of vegetable: " + p.getName() + "\nKalory concept: " +
                         p.getKalory());
             }
         }
-        return found_vegetavles;
+        return found_vegetables;
     }
 
 
@@ -104,7 +104,7 @@ public class Salad {
     public void flush() {
         this.id = 0;
         this.BoxForm = "Unknown";
-        this.listOfVegetables = null;
+        this.listOfVegetables.clear();
         System.out.println("Salad data flushed!");
     }
 
