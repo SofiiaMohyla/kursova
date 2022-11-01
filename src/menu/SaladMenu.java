@@ -9,9 +9,12 @@ import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 public class SaladMenu {
+
+    private static final Logger logger = Logger.getLogger(SaladMenu.class.getName());
     static Map<String, Method> commands = null;
     static {
         try {
@@ -74,12 +77,12 @@ public class SaladMenu {
         System.out.println("Showing Salad data");
         System.out.println("ID: " + salad.getId());
         System.out.println("Boxform: " + salad.getBoxForm());
-        System.out.println("TotalWeigth: " + salad.getTotalWeight());
+        System.out.println("TotalWeigth: " + salad.getTotalWeight(logger));
         System.out.println("----------------------------");
         System.out.println("----------------------------");
         System.out.println("Vegetables: " + salad.size());
         int i = 0;
-        salad.getListOfVegetables();
+        salad.getListOfVegetables(logger);
     }
 
     public static void sortByPrice() throws IOException, ParseException
@@ -93,7 +96,7 @@ public class SaladMenu {
             System.out.println("Done!");
             System.out.println("Sorted Vegetables: ");
             System.out.println("---------------");
-            salad.getListOfVegetables();
+            salad.getListOfVegetables(logger);
             System.out.println("---------------");
         }
     }
@@ -110,7 +113,7 @@ public class SaladMenu {
             System.out.println("---------------");
 
             salad.findByKalory(Integer.parseInt(splitted[0]),
-                    Integer.parseInt(splitted[1]));
+                    Integer.parseInt(splitted[1]),logger);
         }
         System.out.println("---------------");
     }

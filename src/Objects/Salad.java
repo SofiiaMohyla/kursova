@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 public class Salad {
@@ -20,7 +21,8 @@ public class Salad {
         return instance;
     }
 
-    public void addVegetables(Vegetables vegetables) {
+    public void addVegetables(Vegetables vegetables,Logger logger) {
+        logger.finer("Додаємо овоч до салату. Не можливо вибрати тип, який не існує");
         this.listOfVegetables.add(vegetables);
     }
 
@@ -40,7 +42,8 @@ public class Salad {
         });
     }
 
-    public List<Vegetables> findByKalory(int min, int max) {
+    public List<Vegetables> findByKalory(int min, int max, Logger logger) {
+        logger.fine("Фільтруємо наші овочі у салаті за вмістом калорій , можливим є повернення пустого списку.");
         List<Vegetables> found_vegetables = new ArrayList<>();
         for (Vegetables p : listOfVegetables) {
             if (p.getKalory() >= min && p.getKalory() <= max) {
@@ -53,7 +56,10 @@ public class Salad {
     }
 
 
-    public int getTotalWeight() {
+    public int getTotalWeight(Logger logger) {
+        logger.finer("Занулюємо загальну вагу салату, для очищення від можливої неправдивої інформації" +
+                " та знаходимо загальну вагу салату додаючи ваги овочів які у нього входять.");
+
         int total = 0;
         for (int i = 0; i < listOfVegetables.size(); i++) {
             total = total + listOfVegetables.get(i).getWeight();
@@ -61,7 +67,8 @@ public class Salad {
         return total;
     }
 
-    public void delete(int index) {
+    public void delete(int index, Logger logger) {
+        logger.finer("Видаляємо овоч з салату за вказаним індексом");
         listOfVegetables.remove(index);
     }
 
@@ -85,14 +92,16 @@ public class Salad {
         BoxForm = boxForm;
     }
 
-    public void getListOfVegetables() {
+    public void getListOfVegetables(Logger logger) {
+        logger.finest("Виводимо список овочів у нашому салаті. Є вийняток, коли немає доданих овочів у салат.");
         for (int i = 0; i < listOfVegetables.size(); i++) {
             System.out.println("\nType " + listOfVegetables.get(i) + "QR code: " + listOfVegetables.get(i).getQR() + "\nName of vegetable: " + listOfVegetables.get(i).getName() + "\nKalory concept: " + listOfVegetables.get(i).getKalory()
                     + "\nPrice of vegetable: " + listOfVegetables.get(i).getPrice() + "\nWeight of vegetable: " + listOfVegetables.get(i).getWeight());
         }
     }
 
-    public void getUniqueId() {
+    public void getUniqueId(Logger logger) {
+        logger.finest("Виводимо список овочів у нашому салаті з унікальними кодами . Є вийняток, коли немає доданих овочів у салат.");
         int i;
         for (i = 0; i < listOfVegetables.size(); i++) {
             System.out.println("\nUnique code: " + i + "\nName of vegetable: " + listOfVegetables.get(i).getName());

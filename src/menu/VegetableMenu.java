@@ -8,9 +8,11 @@ import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 public class VegetableMenu {
+    private static final Logger logger = Logger.getLogger(VegetableMenu.class.getName());
     static Map<String, Method> commands = null;
     static {
         try {
@@ -70,8 +72,7 @@ public class VegetableMenu {
                 createVegetable();
             } else {
                 salad.addVegetables(new Onion_type(paramSplit[0],
-                        Integer.parseInt(paramSplit[1]), Integer.parseInt(paramSplit[2]), Integer.parseInt(paramSplit[3]), Integer.parseInt(paramSplit[4])) {
-                });
+                        Integer.parseInt(paramSplit[1]), Integer.parseInt(paramSplit[2]), Integer.parseInt(paramSplit[3]), Integer.parseInt(paramSplit[4])),logger);
                 System.out.println("Success");
             }
         } else if(result.equals("cabbage_type")) {
@@ -85,8 +86,7 @@ public class VegetableMenu {
                 createVegetable();
             } else {
                 salad.addVegetables(new Cabbage_type(paramSplit[0],
-                        Integer.parseInt(paramSplit[1]), Integer.parseInt(paramSplit[2]), Integer.parseInt(paramSplit[3]), Integer.parseInt(paramSplit[4])) {
-                });
+                        Integer.parseInt(paramSplit[1]), Integer.parseInt(paramSplit[2]), Integer.parseInt(paramSplit[3]), Integer.parseInt(paramSplit[4])),logger);
                 System.out.println("Success");
             }}
         else if(result.equals("root_crops")) {
@@ -100,8 +100,7 @@ public class VegetableMenu {
                 createVegetable();
             } else {
                 salad.addVegetables(new Root_crops(paramSplit[0],
-                        Integer.parseInt(paramSplit[1]), Integer.parseInt(paramSplit[2]), Integer.parseInt(paramSplit[3]), Integer.parseInt(paramSplit[4])) {
-                });
+                        Integer.parseInt(paramSplit[1]), Integer.parseInt(paramSplit[2]), Integer.parseInt(paramSplit[3]), Integer.parseInt(paramSplit[4])),logger);
                 System.out.println("Success");
             }
         } else {
@@ -116,7 +115,7 @@ public class VegetableMenu {
         else {
             System.out.println("vegetables in salad:");
             int i = 0;
-            salad.getListOfVegetables();}
+            salad.getListOfVegetables(logger);}
     }
     public static void deleteVegetables() throws IOException, ParseException {
         Salad salad = Salad.getInstance();
@@ -125,10 +124,10 @@ public class VegetableMenu {
         if (salad.size() == 0){
             System.out.println("There are no Vegetables to remove.");
         }else {
-            salad.getUniqueId();
+            salad.getUniqueId(logger);
             System.out.println("Enter Unique Id of Vegetables to delete:");
             int id = scan.nextInt();
-            salad.delete(id);
+            salad.delete(id,logger);
             System.out.println("Success");
         }
     }

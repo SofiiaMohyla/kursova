@@ -3,6 +3,7 @@ package test;
 import Objects.Salad;
 import Objects.Vegetables;
 import org.junit.jupiter.api.Test;
+import java.util.logging.Logger;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -17,33 +18,37 @@ class SaladTest {
 
     private Salad test = new Salad();
 
+    private static final Logger logger = Logger.getLogger(SaladTest.class.getName());
     private final PrintStream standardOut = System.out;
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     private final ByteArrayOutputStream outputStreamSecond = new ByteArrayOutputStream();
 
     @org.junit.jupiter.api.Test
     void testGetTotalWeight() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122));
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
-        assertEquals(7, test.getTotalWeight());
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+        assertEquals(7, test.getTotalWeight(logger));
     }
 
 
     @Test
     void testAddVegetables1() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
         assertEquals(new Vegetables("Garlic", 10, 4, 10, 192).toString(),test.getList().get(0).toString());
     }
 
 
     @Test
     void testFindByKalory1() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
         List<Vegetables> found_vegetables = new ArrayList<>();
-        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122));
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
         for (Vegetables p : Salad.getList()) {
             if (p.getKalory() >= 11 && p.getKalory() <= 13) {
                 found_vegetables.add(p);
@@ -56,11 +61,12 @@ class SaladTest {
 
     @Test
     void testFindByKalory2() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
         List<Vegetables> found_vegetables = new ArrayList<>();
-        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122));
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
-        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999));
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999),logger);
         for (Vegetables p : Salad.getList()) {
             if (p.getKalory() >= 11 && p.getKalory() <= 13) {
                 found_vegetables.add(p);
@@ -73,19 +79,21 @@ class SaladTest {
 
     @Test
     void testDelete1() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
-        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999));
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192), logger);
+        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999), logger);
         test.getList().remove(1);
         assertEquals(new Vegetables("Garlic", 10, 4, 10, 192).toString(),test.getList().get(0).toString());
     }
 
     @Test
     void testDelete2() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
-        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999));
-        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122));
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192), logger);
+        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999), logger);
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122), logger);
         test.getList().remove(2);
         List<Vegetables> found_vegetables = new ArrayList<>();
         found_vegetables.add(new Vegetables("Garlic", 10, 4, 10, 192));
@@ -100,10 +108,11 @@ class SaladTest {
 
     @Test
     void testSortByPrice() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122));
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
-        test.addVegetables(new Vegetables("Cabbage", 19, 20, 30, 999));
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+        test.addVegetables(new Vegetables("Cabbage", 19, 20, 30, 999),logger);
 
         List<Vegetables> found_vegetables = new ArrayList<>();
         found_vegetables.add(new Vegetables("Garlic", 10, 4, 10, 192));
@@ -123,9 +132,10 @@ class SaladTest {
 
     @Test
     void testFlush() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
-        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999));
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999),logger);
 
         System.setOut(new PrintStream(outputStreamCaptor));
         test.flush();
@@ -138,11 +148,12 @@ class SaladTest {
 
     @Test
     void testGetUniqueId() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
 
         System.setOut(new PrintStream(outputStreamCaptor));
-        test.getUniqueId();
+        test.getUniqueId(logger);
         System.setOut(new PrintStream(standardOut));
 
         String expected = "\nUnique code: " + 0 + "\nName of vegetable: " + test.getList().get(0).getName();
@@ -152,12 +163,13 @@ class SaladTest {
 
     @Test
     void testGetListOfVegetables() {
+        logger.setUseParentHandlers(false);
         test.getList().clear();
-        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122));
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192));
-        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999));
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999),logger);
         System.setOut(new PrintStream(outputStreamCaptor));
-        test.getListOfVegetables();
+        test.getListOfVegetables(logger);
         System.setOut(new PrintStream(standardOut));
         System.setOut(new PrintStream(outputStreamSecond));
         for (int i = 0; i < test.getList().size(); i++){

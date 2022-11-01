@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve">
+    <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Salad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/SaladMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/SaladMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/VegetableMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/VegetableMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SaladTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/VegetableTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,10 +47,14 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true"
+    "create.test.in.the.same.root": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -139,7 +147,20 @@
       <workItem from="1666601282332" duration="1006000" />
       <workItem from="1666603159384" duration="6920000" />
       <workItem from="1666683194866" duration="2091000" />
-      <workItem from="1666951644483" duration="12239000" />
+      <workItem from="1666951644483" duration="15701000" />
+      <workItem from="1667290824139" duration="11000" />
+      <workItem from="1667290854156" duration="57000" />
+      <workItem from="1667290922497" duration="15000" />
+      <workItem from="1667290951880" duration="8000" />
+      <workItem from="1667290970949" duration="9000" />
+      <workItem from="1667290989494" duration="5000" />
+      <workItem from="1667291004834" duration="28000" />
+      <workItem from="1667291050873" duration="5000" />
+      <workItem from="1667291070794" duration="6000" />
+      <workItem from="1667291089211" duration="5000" />
+      <workItem from="1667291104271" duration="6000" />
+      <workItem from="1667291120670" duration="40000" />
+      <workItem from="1667291180410" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -148,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666955199679</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="solve_">
+      <created>1666975380374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666975380374</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,10 +195,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="solve" />
-    <option name="LAST_COMMIT_MESSAGE" value="solve" />
+    <MESSAGE value="solve_" />
+    <option name="LAST_COMMIT_MESSAGE" value="solve_" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kurs$test_in_kurs.ic" NAME="test in kurs Coverage Results" MODIFIED="1666974842803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/kurs$test_in_kurs.ic" NAME="test in kurs Coverage Results" MODIFIED="1666975161011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/kurs$SaladTest_testAddVegetables.ic" NAME="SaladTest.testAddVegetables Coverage Results" MODIFIED="1666962822050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
