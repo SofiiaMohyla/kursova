@@ -18,6 +18,7 @@ public class AdminMenu extends Menu {
 
     public void execute(String command) throws InvocationTargetException,
             IllegalAccessException, NoSuchMethodException {
+        command = command.toLowerCase();
         String[] objectCommand = command.split(" ");
         if (this.commands.containsKey(objectCommand[0])) {
             try {
@@ -63,6 +64,7 @@ public class AdminMenu extends Menu {
             System.out.println("* exit -        Exit program                   *");
             System.out.println("************************************************");
         }
+        System.out.println();
     }
 }
 

@@ -18,14 +18,15 @@ public class VegetableMenu {
         try {
             commands = new HashMap<>();
             commands.put("create", VegetableMenu.class.getMethod("createVegetable"));
-            commands.put("view", VegetableMenu.class.getMethod("showVegetable"));
-            commands.put("delete", VegetableMenu.class.getMethod("deleteVegetable"));
+            commands.put("view", VegetableMenu.class.getMethod("showVegetables"));
+            commands.put("delete", VegetableMenu.class.getMethod("deleteVegetables"));
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
     public static void execute(String command) throws InvocationTargetException,
             IllegalAccessException {
+        command = command.toLowerCase();
         String[] splitCommands = command.split(" ");
         if(splitCommands.length>1){
             String specifiedCommand = splitCommands[1];
@@ -59,12 +60,12 @@ public class VegetableMenu {
     public static void createVegetable() {
         Salad salad = Salad.getInstance();
         Scanner scan = new Scanner(System.in);
-        System.out.print("Select Vegetable type (onion_type, cabbage_type, root_crops): ");
+        System.out.print("\nSelect Vegetable type (onion_type, cabbage_type, root_crops): ");
         String result = scan.nextLine();
         if(result.equals("onion_type")){
-            System.out.println("Type vegetable using template:");
+            System.out.println("Type vegetable using template:\n");
             System.out.println("[name] [price] [weight] [kalory] [QR code]");
-            System.out.println(" Onion   12      40       20      1111");
+            System.out.println(" Onion   12      40       20      1111\n");
             String params = scan.nextLine();
             String[] paramSplit = params.split(" ");
             if(paramSplit.length != 5) {
@@ -76,9 +77,9 @@ public class VegetableMenu {
                 System.out.println("Success");
             }
         } else if(result.equals("cabbage_type")) {
-            System.out.println("Type vegetable using template:");
+            System.out.println("Type vegetable using template:\n");
             System.out.println("[name]   [price] [weight] [kalory] [QR code]");
-            System.out.println("Brussel    100     70       31      2333 ");
+            System.out.println("Brussel    100     70       31      2333 \n");
             String params = scan.nextLine();
             String[] paramSplit = params.split(" ");
             if(paramSplit.length != 5) {
@@ -90,9 +91,9 @@ public class VegetableMenu {
                 System.out.println("Success");
             }}
         else if(result.equals("root_crops")) {
-            System.out.println("Type vegetable using template:");
+            System.out.println("Type vegetable using template:\n");
             System.out.println("[name] [price] [weight] [kalory] [QR code]");
-            System.out.println("Potato   9       30       67      4444");
+            System.out.println("Potato   9       30       67      4444\n");
             String params = scan.nextLine();
             String[] paramSplit = params.split(" ");
             if(paramSplit.length != 5) {
@@ -107,28 +108,32 @@ public class VegetableMenu {
             System.out.println("Unknown type.");
             createVegetable();
         }
+        System.out.println();
     }
     public static void showVegetables() throws IOException, ParseException {
         Salad salad = Salad.getInstance();
         if (salad.size() == 0){
-            System.out.println("There are no vegetables created.");}
+            System.out.println("\nThere are no vegetables created.");}
         else {
-            System.out.println("vegetables in salad:");
+            System.out.println("\nVegetables in salad:");
             int i = 0;
             salad.getListOfVegetables(logger);}
+
+        System.out.println();
     }
+
     public static void deleteVegetables() throws IOException, ParseException {
         Salad salad = Salad.getInstance();
         int i = 0;
         Scanner scan = new Scanner(System.in);
         if (salad.size() == 0){
-            System.out.println("There are no Vegetables to remove.");
+            System.out.println("\nThere are no Vegetables to remove.");
         }else {
             salad.getUniqueId(logger);
-            System.out.println("Enter Unique Id of Vegetables to delete:");
+            System.out.println("\nEnter Unique Id of Vegetables to delete:");
             int id = scan.nextInt();
             salad.delete(id,logger);
-            System.out.println("Success");
+            System.out.println("Success\n");
         }
     }
 }

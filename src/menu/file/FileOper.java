@@ -1,4 +1,4 @@
-package file;
+package menu.file;
 
 import Objects.Salad;
 import Objects.Vegetables;
@@ -15,8 +15,9 @@ public class FileOper {
     PrintStream standart;
     PrintStream fileStream;
 
-    public Salad readFile(String destination,Logger logger) throws Exception {
-        Salad content = new Salad();
+    public void readFile(String destination,Logger logger) throws Exception {
+        Salad salad = Salad.getInstance();
+        salad.getList().clear();
         try {
             FileReader fr = new FileReader(destination);
             Scanner reader = new Scanner(fr);
@@ -27,7 +28,7 @@ public class FileOper {
                 int kalory = Integer.parseInt(reader.nextLine());
                 int price = Integer.parseInt(reader.nextLine());
                 int weight = Integer.parseInt(reader.nextLine());
-                content.addVegetables(new Vegetables(name,price,weight,kalory,qr),logger);
+                salad.addVegetables(new Vegetables(name,price,weight,kalory,qr),logger);
             }
 
             fr.close();
@@ -42,10 +43,10 @@ public class FileOper {
             throw new RuntimeException(e);
         }
 
-        return content;
     }
 
-    public void writeFile(String destination, Salad content, Logger logger) throws Exception {
+    public void writeFile(String destination, Logger logger) throws Exception {
+        Salad salad = Salad.getInstance();
         standart = System.out;
         try {
             File myFile = new File(destination);
@@ -67,10 +68,10 @@ public class FileOper {
             e.printStackTrace();
         }
 
-        List<Vegetables> vegetables = content.getList();
+        List<Vegetables> vegetables = salad.getList();
         for (int i = 0; i < vegetables.size(); i++) {
-            System.out.println("\nQR code: " + vegetables.get(i).getQR() + "\nName of vegetable: " + vegetables.get(i).getName() + "\nKalory concept: " + vegetables.get(i).getKalory()
-                    + "\nPrice of vegetable: " + vegetables.get(i).getPrice() + "\nWeight of vegetable: " + vegetables.get(i).getWeight());
+            System.out.println(vegetables.get(i).getQR() + "\n" + vegetables.get(i).getName() + "\n" + vegetables.get(i).getKalory()
+                    + "\n" + vegetables.get(i).getPrice() + "\n" + vegetables.get(i).getWeight());
         }
         System.out.flush();
         System.setOut(standart);

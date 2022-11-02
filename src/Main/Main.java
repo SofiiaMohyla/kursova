@@ -19,7 +19,7 @@ public class Main {
             result = scan.nextLine();
             if (result.equals("911")) {
                 menu = new AdminMenu();
-                System.out.println("You are in Admin's menu. Type help for help: ");
+                System.out.println("You are in Admin menu. Type help for help: ");
             } else {
                 System.out.println("Try again.");
                 result = "wrong";
