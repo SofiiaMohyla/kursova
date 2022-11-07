@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Logger;
+
+import base.Database;
 import menu.file.FileOper;
 
 public class SaladMenu {
@@ -60,8 +62,8 @@ public class SaladMenu {
             System.out.println("* show - View salad data                 *");
             System.out.println("* sort - Sort vegetable in salad by price*");
             System.out.println("* find - Find kalory concept             *");
-            System.out.println("* write - Write salad info into file     *");
-            System.out.println("* read - Read salad info from file       *");
+            System.out.println("* write - Write salad info database      *");
+            System.out.println("* read - Read salad info from database   *");
             System.out.println("******************************************");
         }
     }
@@ -129,14 +131,10 @@ public class SaladMenu {
     }
 
     public static void readSalad() throws Exception {
-        System.out.println("\nWrite your file destination:");
-        String destination = new Scanner(System.in).nextLine();
-        new FileOper().readFile(destination,logger);
+       new Database().readFromDB(logger);
     }
 
     public static void writeSalad() throws Exception {
-        System.out.println("\nWrite your file destination:");
-        String destination = new Scanner(System.in).nextLine();
-        new FileOper().writeFile(destination,logger);
+        new Database().saveToDB(logger);
     }
 }

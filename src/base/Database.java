@@ -1,51 +1,70 @@
 package base;
 import java.sql.*;
+
+import Objects.Salad;
 import Objects.Vegetables;
-import com.mysql.cj.protocol.Resultset;
-import java.util.ArrayList;
+
+import java.util.List;
+import java.util.logging.Logger;
 
 
 public class Database {
-    public static void main(String[] args){
+
+    public static void readFromDB(Logger logger) throws Exception {
+        Salad salad = Salad.getInstance();
+        salad.getList().clear();
         try {
+
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Vegetables", "root", "root1111");
             Statement statement = connection.createStatement();
             ResultSet resultset = statement.executeQuery("select * from veg");
-            while (resultset.next()) {
-                System.out.println(resultset.getString("name"));
+
+            String name = null;
+            int price = 0,weight = 0, kalory = 0,QR = 0;
+                /*public Vegetables(String name, int price, int weight, int kalory, int QR) {
+                    this.QR = QR;
+                    this.name = name;
+                    this.price = price;
+                    this.weight = weight;
+                    this.kalory = kalory;
+                }*/
+            System.out.println("Elements, which was read from db: \n");
+            while(resultset.next()){
+                name = resultset.getString("name");
+                price = Integer.parseInt(resultset.getString("price").trim());
+                weight = Integer.parseInt(resultset.getString("weight").trim());
+                kalory = Integer.parseInt(resultset.getString("kalory").trim());
+                QR = Integer.parseInt(resultset.getString("qr").trim());
+                salad.addVegetables(new Vegetables(name,price,weight,kalory,QR),logger);
             }
-        }catch (Exception e){
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-//    public ArrayList<Vegetables> getAll(){    //повертає
-//        try {
-//            ArrayList<Vegetables> res = new ArrayList<>();
-//            ResultSet resultSet = statement.executeQuery("тут або скл запит" +
-//                    " або виклик збереженої процедури, яка буде повертати всі записи з бази");
-//            while(resultSet.next()){
-//                res.add(parseVegetable(resultSet));
-//            }
-//            return res;
-//        }catch (Exception e) {
-//            System.out.println(e.getMessage());
-//            return null;
-//        }
-//    }
-//
-//    private Vegetables parseVegetable(Resultset resultSet){
-//        try {
-//            var name = resultSet.getString("номер або назва колонки");
-//            var price = resultSet.getString("");
-//            var weight = resultSet.getString("");
-//            var kalory = resultSet.getString("");
-//            var QR = resultSet.getString("");
-//            return new Vegetables(name,price,weight,kalory,QR);
-//        }catch (Exception e){
-//            System.out.println(e.getMessage());
-//            return null;
-//        }
-//    }
+    public static void saveToDB(Logger logger) throws Exception {
+
+        Salad salad = Salad.getInstance();
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Vegetables", "root", "root1111");
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate("TRUNCATE TABLE veg");
+
+            List<Vegetables> saladList = salad.getList();
+
+            for(int i = 0;i < saladList.size();i++){
+                String insertSql = "INSERT INTO veg VALUES ('" + saladList.get(i).getName() + "', " + saladList.get(i).getPrice() + ", "
+                        + saladList.get(i).getWeight() + ", " + saladList.get(i).getKalory() + ", " + saladList.get(i).getQR() + ")";
+                statement.executeUpdate(insertSql);
+            }
+
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 
 }
