@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_8">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/file/FileOper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/AdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/SaladMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/SaladMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/fileCommand/ReadFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/fileCommand/WriteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +60,33 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.test in kurs">
+  <component name="RunManager" selected="Application.Database">
+    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.Database" />
+      <module name="kurs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="kurs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SaladTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kurs" />
       <extension name="coverage">
@@ -96,22 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaladTest.testgetTotalWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kurs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SaladTest" />
-      <option name="METHOD_NAME" value="testgetTotalWeight" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test in kurs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kurs" />
       <extension name="coverage">
@@ -128,10 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Database" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.test in kurs" />
         <item itemvalue="JUnit.SaladTest" />
         <item itemvalue="JUnit.SaladTest.testAddVegetables" />
-        <item itemvalue="JUnit.SaladTest.testgetTotalWeight" />
       </list>
     </recent_temporary>
   </component>
@@ -165,6 +172,8 @@
       <workItem from="1667421196493" duration="11000" />
       <workItem from="1667421220050" duration="6000" />
       <workItem from="1667421238459" duration="102000" />
+      <workItem from="1667421352007" duration="621000" />
+      <workItem from="1667813313397" duration="4721000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -187,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667292068625</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="solve_8">
+      <created>1667421376412</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667421376412</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
