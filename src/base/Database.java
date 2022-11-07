@@ -30,6 +30,10 @@ public class Database {
                 }*/
             System.out.println("Elements, which was read from db: \n");
             while(resultset.next()){
+                System.out.println("Name: " + resultset.getString("name") + "\nPrice: " + resultset.getString("price")
+                        + "\nWeight: " + resultset.getString("weight") + "\nKalory: " +  resultset.getString("kalory")
+                        + "\nQR: " + resultset.getString("qr") + "\n");
+
                 name = resultset.getString("name");
                 price = Integer.parseInt(resultset.getString("price").trim());
                 weight = Integer.parseInt(resultset.getString("weight").trim());
