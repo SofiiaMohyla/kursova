@@ -59,7 +59,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Database">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="base.Database" />
       <module name="kurs" />
@@ -133,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Database" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Database" />
         <item itemvalue="JUnit.test in kurs" />
         <item itemvalue="JUnit.SaladTest" />
         <item itemvalue="JUnit.SaladTest.testAddVegetables" />
@@ -172,7 +172,7 @@
       <workItem from="1667421220050" duration="6000" />
       <workItem from="1667421238459" duration="102000" />
       <workItem from="1667421352007" duration="621000" />
-      <workItem from="1667813313397" duration="5471000" />
+      <workItem from="1667813313397" duration="7246000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -209,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667818561973</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="solve_9">
+      <created>1667822287071</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667822287071</updated>
+    </task>
+    <task id="LOCAL-00007" summary="solve_9">
+      <created>1667822458445</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667822458445</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
