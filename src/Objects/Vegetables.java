@@ -9,7 +9,8 @@ public class Vegetables {
 
     @Override
     public String toString() {
-        return "";
+        return  "QR code: " + QR + "  Name of vegetable: " + name + "  Kalory concept: " + kalory
+                + "  Price of vegetable: " + price + "  Weight of vegetable: " + weight;
     }
 
     public Vegetables(String name, int price, int weight, int kalory, int QR) {

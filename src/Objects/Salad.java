@@ -95,7 +95,7 @@ public class Salad {
     public void getListOfVegetables(Logger logger) {
         logger.finest("Виводимо список овочів у нашому салаті. Є вийняток, коли немає доданих овочів у салат.");
         for (int i = 0; i < listOfVegetables.size(); i++) {
-            System.out.println("\nType " + listOfVegetables.get(i) + "QR code: " + listOfVegetables.get(i).getQR() + "\nName of vegetable: " + listOfVegetables.get(i).getName() + "\nKalory concept: " + listOfVegetables.get(i).getKalory()
+            System.out.println("\nQR code: " + listOfVegetables.get(i).getQR() + "\nName of vegetable: " + listOfVegetables.get(i).getName() + "\nKalory concept: " + listOfVegetables.get(i).getKalory()
                     + "\nPrice of vegetable: " + listOfVegetables.get(i).getPrice() + "\nWeight of vegetable: " + listOfVegetables.get(i).getWeight());
         }
     }

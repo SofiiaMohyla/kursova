@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_9">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Cabbage_type.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Brussels_sprouts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Carrot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Cauliflower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Cucumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/FermentedCabbage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Garlic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Onion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Paprika.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Potato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Tomato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Onion_type.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Root_crops.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Salad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Vegetables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Vegetables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/AdminMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/SaladMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/VegetableMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/file/FileOper.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -47,7 +72,8 @@
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -75,6 +101,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="kurs" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
@@ -130,12 +157,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Database" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.SaladTest" />
+      <item itemvalue="JUnit.SaladTest.testAddVegetables" />
+      <item itemvalue="JUnit.test in kurs" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SaladTest" />
         <item itemvalue="Application.Database" />
         <item itemvalue="JUnit.test in kurs" />
-        <item itemvalue="JUnit.SaladTest" />
         <item itemvalue="JUnit.SaladTest.testAddVegetables" />
       </list>
     </recent_temporary>
@@ -172,7 +206,32 @@
       <workItem from="1667421238459" duration="102000" />
       <workItem from="1667421352007" duration="621000" />
       <workItem from="1667813313397" duration="7734000" />
-      <workItem from="1667835781638" duration="2730000" />
+      <workItem from="1667835781638" duration="3358000" />
+      <workItem from="1667902810467" duration="2367000" />
+      <workItem from="1667912301677" duration="2000" />
+      <workItem from="1667912438260" duration="15000" />
+      <workItem from="1667912469633" duration="68000" />
+      <workItem from="1667912549249" duration="7000" />
+      <workItem from="1667912574364" duration="5000" />
+      <workItem from="1667912604950" duration="25000" />
+      <workItem from="1667912640113" duration="3000" />
+      <workItem from="1667912653289" duration="12000" />
+      <workItem from="1667912676982" duration="34000" />
+      <workItem from="1667912724581" duration="20000" />
+      <workItem from="1667912758944" duration="42000" />
+      <workItem from="1667912867260" duration="237000" />
+      <workItem from="1667913118074" duration="4177000" />
+      <workItem from="1667919289052" duration="3857000" />
+      <workItem from="1667924694640" duration="30000" />
+      <workItem from="1667924819641" duration="7000" />
+      <workItem from="1667924840848" duration="11000" />
+      <workItem from="1667924861642" duration="6000" />
+      <workItem from="1667924878009" duration="25000" />
+      <workItem from="1667924914300" duration="5000" />
+      <workItem from="1667924927664" duration="6000" />
+      <workItem from="1667924943451" duration="747000" />
+      <workItem from="1667925714940" duration="2000" />
+      <workItem from="1667925720602" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -244,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667837695334</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="solve_9">
+      <created>1667838650505</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667838650505</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +333,10 @@
     <MESSAGE value="solve_8" />
     <MESSAGE value="solve_9" />
     <option name="LAST_COMMIT_MESSAGE" value="solve_9" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kurs$test_in_kurs.ic" NAME="test in kurs Coverage Results" MODIFIED="1666975161011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

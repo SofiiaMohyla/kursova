@@ -12,7 +12,7 @@ public class Database {
 
     public static void readFromDB(Logger logger) throws Exception {
         Salad salad = Salad.getInstance();
-        salad.getList().clear();
+
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Vegetables", "root", "root1111");
@@ -57,10 +57,11 @@ public class Database {
 
             statement.executeUpdate("TRUNCATE TABLE veg");
 
+
             List<Vegetables> saladList = salad.getList();
 
             for(int i = 0;i < saladList.size();i++){
-                String insertSql = "INSERT INTO veg VALUES ('" + saladList.get(i).getName() + "', " + saladList.get(i).getPrice() + ", "
+                String insertSql = "Insert into veg Values ('" + saladList.get(i).getName() + "', " + saladList.get(i).getPrice() + ", "
                         + saladList.get(i).getWeight() + ", " + saladList.get(i).getKalory() + ", " + saladList.get(i).getQR() + ")";
                 statement.executeUpdate(insertSql);
             }
@@ -72,3 +73,4 @@ public class Database {
     }
 
 }
+
