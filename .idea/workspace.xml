@@ -3,30 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_9">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/Cabbage_type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Brussels_sprouts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Carrot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Cauliflower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Cucumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/FermentedCabbage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Garlic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Onion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Paprika.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Potato.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/KindOfVegetables/Tomato.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/Onion_type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/Root_crops.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Salad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects/Vegetables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Vegetables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/AdminMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/SaladMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/VegetableMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/file/FileOper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +78,10 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="kurs" />
+      <option name="PROGRAM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml" />
       <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
@@ -231,7 +212,18 @@
       <workItem from="1667924927664" duration="6000" />
       <workItem from="1667924943451" duration="747000" />
       <workItem from="1667925714940" duration="2000" />
-      <workItem from="1667925720602" duration="407000" />
+      <workItem from="1667925720602" duration="881000" />
+      <workItem from="1667926694432" duration="78000" />
+      <workItem from="1667926865976" duration="158000" />
+      <workItem from="1667927099947" duration="103000" />
+      <workItem from="1667927225950" duration="41000" />
+      <workItem from="1667927333991" duration="112000" />
+      <workItem from="1667927498762" duration="148000" />
+      <workItem from="1667927685291" duration="479000" />
+      <workItem from="1667928389543" duration="34000" />
+      <workItem from="1667928503664" duration="105000" />
+      <workItem from="1667928711674" duration="304000" />
+      <workItem from="1667930708242" duration="246000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -310,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667838650505</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="solve_9">
+      <created>1667926534686</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667926534687</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
