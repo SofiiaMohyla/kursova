@@ -32,6 +32,14 @@ class SaladTest {
         assertEquals(7, test.getTotalWeight(logger));
     }
 
+    @Test
+    void testGetTotalKalory() {
+        logger.setUseParentHandlers(false);
+        test.getList().clear();
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+        assertEquals(23, test.getTotalKalory(logger));
+    }
 
     @Test
     void testAddVegetables1() {
