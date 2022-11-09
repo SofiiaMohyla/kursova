@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_9" />
+    <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_9">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/Salad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SaladTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +64,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SaladTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="base.Database" />
       <module name="kurs" />
@@ -142,8 +148,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SaladTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SaladTest" />
         <item itemvalue="JUnit.test in kurs" />
         <item itemvalue="Application.Database" />
         <item itemvalue="JUnit.SaladTest.testAddVegetables" />
@@ -221,7 +227,7 @@
       <workItem from="1667930708242" duration="855000" />
       <workItem from="1667931810463" duration="3800000" />
       <workItem from="1668011344025" duration="312000" />
-      <workItem from="1668011749192" duration="1242000" />
+      <workItem from="1668011749192" duration="2614000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -335,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668012698970</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="solve_9">
+      <created>1668013156047</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668013156047</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

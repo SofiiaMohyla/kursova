@@ -24,6 +24,8 @@ public class Controller {
     @FXML
     private Label totalKalory;
     @FXML
+    private Label totalPrice;
+    @FXML
     private Label saladName;
     @FXML
     private Label saladId;
@@ -79,7 +81,12 @@ public class Controller {
 
     public void UpdateKalory(){
         int kalory = Salad.getInstance().getTotalKalory(logger);
-        totalWeight.setText(String.valueOf(kalory));
+        totalKalory.setText(String.valueOf(kalory));
+    }
+
+    public void UpdatePrice(){
+        int price = Salad.getInstance().getTotalPrice(logger);
+        totalPrice.setText(String.valueOf(price));
     }
 
     public void enableSaladEdit(javafx.event.ActionEvent e){
@@ -126,6 +133,7 @@ public class Controller {
         UpdateList();
         UpdateWeight();
         UpdateKalory();
+        UpdatePrice();
     }
 
     public void submitFindByKalory(javafx.event.ActionEvent e) throws IOException, ParseException {
@@ -216,6 +224,7 @@ public class Controller {
         UpdateList();
         UpdateWeight();
         UpdateKalory();
+        UpdatePrice();
 
         vegetablePane.setVisible(false);
         vegetablePane.setDisable(true);

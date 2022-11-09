@@ -71,11 +71,22 @@ public class Salad {
         logger.finer("Занулюємо загальну калорійність салату, для очищення від можливої неправдивої інформації" +
                 " та знаходимо загальну калорійність салату додаючи калорійність овочів які у нього входять.");
 
-        int tot = 0;
+        int total = 0;
         for (int i = 0; i < listOfVegetables.size(); i++) {
-            tot = tot + listOfVegetables.get(i).getKalory();
+            total = total + listOfVegetables.get(i).getKalory();
         }
-        return tot;
+        return total;
+    }
+
+    public int getTotalPrice(Logger logger) {
+        logger.finer("Занулюємо загальну вартість салату, для очищення від можливої неправдивої інформації" +
+                " та знаходимо загальну вартість салату додаючи вартість овочів які у нього входять.");
+
+        int total = 0;
+        for (int i = 0; i < listOfVegetables.size(); i++) {
+            total = total + listOfVegetables.get(i).getPrice();
+        }
+        return total;
     }
 
     public void delete(int index, Logger logger) {

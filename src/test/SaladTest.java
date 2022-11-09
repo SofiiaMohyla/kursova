@@ -8,8 +8,6 @@ import java.util.logging.Logger;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,6 +37,15 @@ class SaladTest {
         test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
         test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
         assertEquals(23, test.getTotalKalory(logger));
+    }
+
+    @Test
+    void testGetTotalPrice() {
+        logger.setUseParentHandlers(false);
+        test.getList().clear();
+        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122),logger);
+        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+        assertEquals(22, test.getTotalPrice(logger));
     }
 
     @Test
