@@ -20,7 +20,7 @@
          </image></ImageView>
       <ImageView fitHeight="838.0" fitWidth="1398.0" layoutX="-2.0" layoutY="-4.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Downloads/salat-nisuaz_sitewebukr-1000x600.jpg" />
+            <Image url="@salat-nisuaz_sitewebukr-1000x600.jpg" />
          </image>
          <effect>
             <Lighting>
@@ -159,7 +159,7 @@
       <ListView fx:id="filteredVegetables" layoutX="19.0" layoutY="653.0" prefHeight="158.0" prefWidth="276.0" />
       <ImageView fitHeight="402.0" fitWidth="608.0" layoutX="38.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../salat-nisuaz_sitewebukr-1000x600.jpg" />
+            <Image url="@salat-nisuaz_sitewebukr-1000x600.jpg" />
          </image>
       </ImageView>
       <Label layoutX="67.0" layoutY="387.0" prefHeight="44.0" prefWidth="494.0" text="Create the salad of your dream">
