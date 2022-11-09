@@ -25,25 +25,25 @@
             <Image url="@photo2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="838.0" fitWidth="1399.0" layoutX="-3.0" layoutY="-3.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="838.0" fitWidth="1433.0" layoutX="-1.0" layoutY="-12.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@photo1.jpg" />
          </image></ImageView>
-      <Button layoutX="974.0" layoutY="524.0" mnemonicParsing="false" onAction="#readDB" prefHeight="38.0" prefWidth="195.0" text="Read from database">
+      <Button layoutX="747.0" layoutY="520.0" mnemonicParsing="false" onAction="#readDB" prefHeight="46.0" prefWidth="249.0" text="Read from database">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Button>
-      <Button layoutX="1186.0" layoutY="524.0" mnemonicParsing="false" onAction="#writeDB" prefHeight="38.0" prefWidth="174.0" text="Save to database">
+      <Button layoutX="1024.0" layoutY="521.0" mnemonicParsing="false" onAction="#writeDB" prefHeight="45.0" prefWidth="237.0" text="Save to database">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Button>
-      <Button layoutX="401.0" layoutY="685.0" mnemonicParsing="false" onAction="#sortByPrice" prefHeight="35.0" prefWidth="233.0" text="Sort vegetables by price">
+      <Button layoutX="396.0" layoutY="681.0" mnemonicParsing="false" onAction="#sortByPrice" prefHeight="45.0" prefWidth="290.0" text="Sort vegetables by price">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Button>
-      <Button layoutX="403.0" layoutY="749.0" mnemonicParsing="false" onAction="#flushSalad" prefHeight="35.0" prefWidth="232.0" text="Flush">
+      <Button layoutX="395.0" layoutY="746.0" mnemonicParsing="false" onAction="#flushSalad" prefHeight="45.0" prefWidth="290.0" text="Clear all data">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font></Button>
       <Label layoutX="716.0" layoutY="594.0" prefHeight="29.0" prefWidth="556.0" text="You have just created the salad of your dreams">
          <font>
@@ -61,15 +61,7 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label layoutX="707.0" layoutY="170.0" prefHeight="23.0" prefWidth="269.0" text="List of vegetables in your salad:">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-      <Label layoutX="333.0" layoutY="654.0" prefHeight="29.0" prefWidth="279.0" text="To sort vegetables by price">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <Label layoutX="336.0" layoutY="718.0" prefHeight="16.0" prefWidth="179.0" text="To clear all data">
+      <Label layoutX="709.0" layoutY="96.0" prefHeight="29.0" prefWidth="347.0" text="List of vegetables in your salad:">
          <font>
             <Font size="24.0" />
          </font></Label>
@@ -106,8 +98,8 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ListView fx:id="listOfVegetables" layoutX="681.0" layoutY="198.0" prefHeight="162.0" prefWidth="422.0" />
-      <ListView fx:id="filteredVegetables" layoutX="16.0" layoutY="670.0" prefHeight="158.0" prefWidth="276.0" />
+      <ListView fx:id="listOfVegetables" layoutX="677.0" layoutY="129.0" prefHeight="265.0" prefWidth="375.0" />
+      <ListView fx:id="filteredVegetables" layoutX="15.0" layoutY="675.0" prefHeight="153.0" prefWidth="362.0" />
       <ImageView fitHeight="402.0" fitWidth="608.0" layoutX="38.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@photo1.jpg" />
@@ -170,9 +162,9 @@
             </Button>
          </children>
       </AnchorPane>
-      <Label layoutX="21.0" layoutY="646.0" prefHeight="27.0" prefWidth="265.0" text="List of vegetables found in range:">
+      <Label layoutX="15.0" layoutY="641.0" prefHeight="29.0" prefWidth="406.0" text="List of vegetables found in range:">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Label>
       <AnchorPane fx:id="vegetablePane" disable="true" layoutX="1086.0" layoutY="194.0" prefHeight="326.0" prefWidth="298.0" visible="false">
@@ -219,19 +211,19 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="747.0" layoutY="524.0" mnemonicParsing="false" onAction="#enableKalorySearch" prefHeight="38.0" prefWidth="195.0" text="Find by kalory">
+      <Button layoutX="400.0" layoutY="551.0" mnemonicParsing="false" onAction="#enableKalorySearch" prefHeight="46.0" prefWidth="290.0" text="Find by kalory">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="515.0" layoutY="524.0" mnemonicParsing="false" onAction="#enableSaladEdit" prefHeight="38.0" prefWidth="195.0" text="Create salad">
+      <Button layoutX="540.0" layoutY="399.0" mnemonicParsing="false" onAction="#enableSaladEdit" prefHeight="31.0" prefWidth="318.0" text="Create salad">
          <font>
-            <Font size="18.0" />
+            <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="515.0" layoutY="592.0" mnemonicParsing="false" onAction="#enableVegetableEdit" prefHeight="38.0" prefWidth="195.0" text="Create vegetable">
+      <Button layoutX="397.0" layoutY="617.0" mnemonicParsing="false" onAction="#enableVegetableEdit" prefHeight="46.0" prefWidth="290.0" text="Create vegetable">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Button>
    </children>
