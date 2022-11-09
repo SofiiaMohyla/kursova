@@ -82,6 +82,11 @@
             <Font size="18.0" />
          </font></Label>
       <Label layoutX="-175.0" layoutY="62.0" text="Label" />
+      <Label layoutX="762.0" layoutY="738.0" text="Total kalory:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       <Label fx:id="saladId" layoutX="879.0" layoutY="668.0" prefHeight="17.0" prefWidth="201.0" text="0">
          <font>
             <Font size="18.0" />
@@ -90,6 +95,11 @@
          <font>
             <Font size="18.0" />
          </font></Label>
+      <Label fx:id="totalKalory" layoutX="878.0" layoutY="736.0" prefHeight="17.0" prefWidth="201.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       <ListView fx:id="listOfVegetables" layoutX="652.0" layoutY="203.0" prefHeight="182.0" prefWidth="423.0" />
       <ListView fx:id="filteredVegetables" layoutX="16.0" layoutY="670.0" prefHeight="158.0" prefWidth="276.0" />
       <ImageView fitHeight="402.0" fitWidth="608.0" layoutX="38.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
@@ -218,15 +228,5 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label layoutX="762.0" layoutY="738.0" text="Total kalory:">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="totalKalory" layoutX="878.0" layoutY="736.0" prefHeight="17.0" prefWidth="201.0" text="0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
