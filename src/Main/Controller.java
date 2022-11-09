@@ -5,6 +5,7 @@ import Objects.Vegetables;
 import base.Database;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -20,7 +21,8 @@ public class Controller {
 
     @FXML
     private Label totalWeight;  //Рядки виведення
-
+    @FXML
+    private Label totalKalory;
     @FXML
     private Label saladName;
     @FXML
@@ -53,6 +55,15 @@ public class Controller {
     @FXML
     private ListView<String> filteredVegetables; //Список Овочів
 
+    @FXML
+    private AnchorPane vegetablePane;
+
+    @FXML
+    private AnchorPane kaloryPane;
+
+    @FXML
+    private AnchorPane saladPane;
+
     public void UpdateList(){
         List<Vegetables> vegetables = Salad.getInstance().getList();
         listOfVegetables.getItems().clear();
@@ -66,11 +77,31 @@ public class Controller {
         totalWeight.setText(String.valueOf(weight));
     }
 
+    public void UpdateKalory(){
+        int kalory = Salad.getInstance().getTotalKalory(logger);
+        totalWeight.setText(String.valueOf(kalory));
+    }
+
+    public void enableSaladEdit(javafx.event.ActionEvent e){
+        saladPane.setVisible(true);
+        saladPane.setDisable(false);
+    }
+
+    public void enableKalorySearch(javafx.event.ActionEvent e){
+        kaloryPane.setVisible(true);
+        kaloryPane.setDisable(false);
+    }
+
+    public void enableVegetableEdit(javafx.event.ActionEvent e){
+        vegetablePane.setVisible(true);
+        vegetablePane.setDisable(false);
+    }
     public void readDB(javafx.event.ActionEvent e) throws Exception {
         new Database().readFromDB(logger);
 
         UpdateList();
         UpdateWeight();
+        UpdateKalory();
     }
 
     public void writeDB(javafx.event.ActionEvent e) throws Exception {
@@ -94,35 +125,34 @@ public class Controller {
         saladName.setText(salad.getBoxForm());
         UpdateList();
         UpdateWeight();
+        UpdateKalory();
     }
 
     public void submitFindByKalory(javafx.event.ActionEvent e) throws IOException, ParseException {
-        // Покласти кнопку,
-        // щоб користувач коли нажав на кнопку "Підтвердити", то зчитало рядки, які він попередньо ввів
+
         Salad salad = Salad.getInstance();
         List<Vegetables> filtered = null;
         if (salad.size() > 0){
-            //Добавити два рядки введення, minField i maxField
             String min = minField.getText();   //Зчитування з рядків введення
             String max = maxField.getText();
 
             filtered = salad.findByKalory(Integer.parseInt(min),
                     Integer.parseInt(max),logger);
 
+            filteredVegetables.getItems().clear();
+            for (Vegetables vegetables : filtered) {
+                filteredVegetables.getItems().addAll(vegetables.toString());
+            }
+
         }
 
-        filteredVegetables.getItems().clear();
-        for (Vegetables vegetables : filtered) {
-            filteredVegetables.getItems().addAll(vegetables.toString());
-        }
-
+        kaloryPane.setVisible(false);
+        kaloryPane.setDisable(true);
     }
 
-    public void submitEditSalad(javafx.event.ActionEvent e) {  //Покласти кнопку,
-        // щоб користувач коли нажав на кнопку "Підтвердити", то зчитало рядки, які він попередньо ввів
+    public void submitEditSalad(javafx.event.ActionEvent e) {
         Salad salad = Salad.getInstance();
 
-        //Добавити два рядки введення, boxField i idField
         String boxform = boxField.getText();
 
         if(boxform.equals(""))
@@ -142,13 +172,14 @@ public class Controller {
 
         saladId.setText(String.valueOf(salad.getId()));
         saladName.setText(salad.getBoxForm());
+
+        saladPane.setVisible(false);
+        saladPane.setDisable(true);
     }
 
-    public void submitCreateVegetable(javafx.event.ActionEvent e) {//Покласти кнопку,
-        // щоб користувач коли нажав на кнопку "Підтвердити", то зчитало рядки, які він попередньо ввів
+    public void submitCreateVegetable(javafx.event.ActionEvent e) {
         Salad salad = Salad.getInstance();
 
-        //Добавити п'ять рядків введення: nameField, priceField, weightField, kaloryField i qrField
         String name = nameField.getText();
 
         if(name.equals(""))
@@ -184,19 +215,12 @@ public class Controller {
 
         UpdateList();
         UpdateWeight();
-    }
-    /*public void showVegetables() throws IOException, ParseException {
-        Salad salad = Salad.getInstance();
-        if (salad.size() == 0){
-            System.out.println("\nThere are no vegetables created.");}
-        else {
-            System.out.println("\nVegetables in salad:");
-            int i = 0;
-            salad.getListOfVegetables(logger);}
+        UpdateKalory();
 
-        System.out.println();
+        vegetablePane.setVisible(false);
+        vegetablePane.setDisable(true);
     }
-                                                                                            Ці Два методи можеш переробити, якщо хочеш заморочитися
+    /*
     public void deleteVegetables() throws IOException, ParseException {
         Salad salad = Salad.getInstance();
         int i = 0;

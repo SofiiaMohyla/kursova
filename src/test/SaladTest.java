@@ -173,7 +173,7 @@ class SaladTest {
         System.setOut(new PrintStream(standardOut));
         System.setOut(new PrintStream(outputStreamSecond));
         for (int i = 0; i < test.getList().size(); i++){
-            System.out.println("\nType " + test.getList().get(i) +"QR code: " + test.getList().get(i).getQR() + "\nName of vegetable: " + test.getList().get(i).getName() + "\nKalory concept: " + test.getList().get(i).getKalory()
+            System.out.println("\nQR code: " + test.getList().get(i).getQR() + "\nName of vegetable: " + test.getList().get(i).getName() + "\nKalory concept: " + test.getList().get(i).getKalory()
                     + "\nPrice of vegetable: " + test.getList().get(i).getPrice()+ "\nWeight of vegetable: " + test.getList().get(i).getWeight());
         }
         System.setOut(new PrintStream(standardOut));

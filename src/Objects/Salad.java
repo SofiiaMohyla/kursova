@@ -67,6 +67,17 @@ public class Salad {
         return total;
     }
 
+    public int getTotalKalory(Logger logger) {
+        logger.finer("Занулюємо загальну калорійність салату, для очищення від можливої неправдивої інформації" +
+                " та знаходимо загальну калорійність салату додаючи калорійність овочів які у нього входять.");
+
+        int tot = 0;
+        for (int i = 0; i < listOfVegetables.size(); i++) {
+            tot = tot + listOfVegetables.get(i).getKalory();
+        }
+        return tot;
+    }
+
     public void delete(int index, Logger logger) {
         logger.finer("Видаляємо овоч з салату за вказаним індексом");
         listOfVegetables.remove(index);
