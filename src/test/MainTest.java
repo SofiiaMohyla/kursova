@@ -14,6 +14,8 @@ import org.junit.Test;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationTest;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,6 +45,37 @@ public class MainTest extends ApplicationTest {
         FxToolkit.hideStage();
         release(new KeyCode[]{});
         release(new MouseButton[]{});
+    }
+
+    @Test
+    public void testReadDB() {
+        Salad.getList().clear();
+        clickOn("#asc");
+        String expected = new Vegetables("Onion",71, 12,34,011).toString();
+        clickOn("#Read from database");
+        sleep(600);
+        String actual = Salad.getList().get(0).toString();
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testInsertDB() {
+        Salad.getList().clear();
+        clickOn("#asc");
+        List<Vegetables> vegetables = Salad.getList();
+        vegetables.add(new Vegetables("Onion",71, 12,34,011));
+        clickOn("#Save to database");
+        sleep(600);
+        clickOn("#Read from database");
+        sleep(600);
+
+        String actual = null,expected = null;
+
+        for(int i = 0; i < vegetables.size(); i++){
+            expected += vegetables.get(i).toString();
+            actual += vegetables.getList().get(i).toString();
+        }
+        assertEquals(expected,actual);
     }
 
     @Test
