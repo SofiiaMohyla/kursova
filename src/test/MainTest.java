@@ -90,6 +90,57 @@ public class MainTest extends ApplicationTest {
     }
 
     @Test
+    public void testFindByKalory() {
+        Salad.getList().clear();
+        clickOn("#asc");
+        clickOn("#Create vegetable");
+        sleep(600);
+        clickOn("#Name").write("Onion");
+        sleep(600);
+        clickOn("#Price").write("13");
+        sleep(600);
+        clickOn("#Weight").write("9");
+        sleep(600);
+        clickOn("#Kalory").write("10");
+        sleep(600);
+        clickOn("#ID").write("013");
+        sleep(600);
+        clickOn("#Confirm");
+        sleep(600);
+        clickOn("#Create vegetable");
+        sleep(600);
+        clickOn("#Name").write("Carrot");
+        sleep(600);
+        clickOn("#Price").write("33");
+        sleep(600);
+        clickOn("#Weight").write("20");
+        sleep(600);
+        clickOn("#Kalory").write("50");
+        sleep(600);
+        clickOn("#ID").write("033");
+        sleep(600);
+        clickOn("#Confirm");
+        sleep(600);
+        clickOn("#Find by kalory");
+        sleep(600);
+        clickOn("#Kalory maximum").write("55");
+        sleep(600);
+        clickOn("#Kalory minimum").write("30");
+        sleep(600);
+        clickOn("#Confirm");
+        sleep(600);
+
+        String example =  Salad.getList().get(1).toString();
+
+        assertEquals(" QR code: " + 033 +
+                " Name of vegetable: " + "Carrot" +
+                " Kalory concept: " + 50 +
+                " Price of vegetable: " + 33 +
+                " Weight of vegetable: " + 20 ,example);
+
+    }
+
+    @Test
     public void testReadDB() {
         Salad.getList().clear();
         clickOn("#asc");
