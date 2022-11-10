@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_9">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/photo1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/photo1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/photo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/photo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Salad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Vegetables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Vegetables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SaladTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +71,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="base.Database" />
       <module name="kurs" />
@@ -77,16 +87,31 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
-      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="kurs" />
       <option name="PROGRAM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml" />
       <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Main.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kurs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,22 +127,6 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.SaladTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SaladTest.testAddVegetables" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kurs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SaladTest" />
-      <option name="METHOD_NAME" value="testAddVegetables" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,17 +148,17 @@
     <list>
       <item itemvalue="Application.Database" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MainTest" />
       <item itemvalue="JUnit.SaladTest" />
-      <item itemvalue="JUnit.SaladTest.testAddVegetables" />
       <item itemvalue="JUnit.test in kurs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SaladTest" />
         <item itemvalue="JUnit.test in kurs" />
         <item itemvalue="Application.Database" />
-        <item itemvalue="JUnit.SaladTest.testAddVegetables" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +234,7 @@
       <workItem from="1667931810463" duration="3800000" />
       <workItem from="1668011344025" duration="312000" />
       <workItem from="1668011749192" duration="2929000" />
-      <workItem from="1668016071952" duration="538000" />
+      <workItem from="1668016071952" duration="6145000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -353,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668015895030</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="solve_9">
+      <created>1668017229700</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1668017229700</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

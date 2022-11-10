@@ -1,7 +1,7 @@
 package test;
 
-import Objects.Salad;
-import Objects.Vegetables;
+import objects.Salad;
+import objects.Vegetables;
 import org.junit.jupiter.api.Test;
 import java.util.logging.Logger;
 

@@ -1,7 +1,7 @@
-package Main;
+package main;
 
-import Objects.Salad;
-import Objects.Vegetables;
+import objects.Salad;
+import objects.Vegetables;
 import base.Database;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -9,10 +9,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Controller {
@@ -109,6 +106,7 @@ public class Controller {
         UpdateList();
         UpdateWeight();
         UpdateKalory();
+        UpdatePrice();
     }
 
     public void writeDB(javafx.event.ActionEvent e) throws Exception {

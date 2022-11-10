@@ -1,8 +1,8 @@
 package base;
 import java.sql.*;
 
-import Objects.Salad;
-import Objects.Vegetables;
+import objects.Salad;
+import objects.Vegetables;
 
 import java.util.List;
 import java.util.logging.Logger;
