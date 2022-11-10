@@ -48,6 +48,48 @@ public class MainTest extends ApplicationTest {
     }
 
     @Test
+    public void testCreateSalad(){
+        Salad.getList().clear();
+        clickOn("#Create salad");
+        sleep(600);
+        clickOn("#Name").write("Dream");
+        sleep(600);
+        clickOn("#id").write("013");
+        sleep(600);
+        clickOn("#Confirm");
+        verifyThat("#companyName",hasText("Company Name: Emirates Airline"));
+        String example =  Salad.getBoxForm().toString() + Salad.getID().toString();
+        assertEquals(" Its name: " + "Dream" +
+                " Its ID: " + 013 ,example);
+    }
+
+    @Test
+    public void testCreateVegetable() {
+        Salad.getList().clear();
+        clickOn("#Create vegetable");
+        sleep(600);
+        clickOn("#Name").write("Onion");
+        sleep(600);
+        clickOn("#Price").write("13");
+        sleep(600);
+        clickOn("#Weight").write("9");
+        sleep(600);
+        clickOn("#Kalory").write("10");
+        sleep(600);
+        clickOn("#ID").write("013");
+        sleep(600);
+        clickOn("#Confirm");
+        sleep(600);
+        String example =  Salad.getList().get(0).toString();
+
+        assertEquals(" QR code: " + 13 +
+                " Name of vegetable: " + "Onion" +
+                " Kalory concept: " + 10 +
+                " Price of vegetable: " + 13 +
+                " Weight of vegetable: " + 9 ,example);
+    }
+
+    @Test
     public void testReadDB() {
         Salad.getList().clear();
         clickOn("#asc");
@@ -78,29 +120,5 @@ public class MainTest extends ApplicationTest {
         assertEquals(expected,actual);
     }
 
-    @Test
-    public void testCreateVegetable() {
-        Salad.getList().clear();
-        clickOn("#Create vegetable");
-        sleep(600);
-        clickOn("#Name").write("Onion");
-        sleep(600);
-        clickOn("#Price").write("13");
-        sleep(600);
-        clickOn("#Weight").write("9");
-        sleep(600);
-        clickOn("#Kalory").write("10");
-        sleep(600);
-        clickOn("#ID").write("013");
-        sleep(600);
-        clickOn("#Confirm");
-        sleep(600);
-        String example =  Salad.getList().get(0).toString();
 
-        assertEquals(" QR code: " + 13 +
-                " Name of vegetable: " + "Onion" +
-                " Kalory concept: " + 10 +
-                " Price of vegetable: " + 13 +
-                " Weight of vegetable: " + 9 ,example);
-    }
 }
