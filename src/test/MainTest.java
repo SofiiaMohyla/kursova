@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import static java.sql.JDBCType.NULL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.testfx.api.FxAssert.verifyThat;
 import static org.testfx.matcher.control.TextMatchers.hasText;
@@ -138,6 +139,16 @@ public class MainTest extends ApplicationTest {
                 " Price of vegetable: " + 33 +
                 " Weight of vegetable: " + 20 ,example);
 
+    }
+
+    @Test
+    public void testFlush() {
+        Salad.getList().clear();
+        clickOn("#asc");
+        clickOn("#Clear all data");
+        sleep(600);
+        String actual = Salad.getList().get(0).toString();
+        assertEquals(NULL,actual);
     }
 
     @Test
