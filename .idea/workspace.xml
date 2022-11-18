@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_9">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/loadui_testFx.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/testfx_core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/testfx_junit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/testfx_junit5.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Salad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SaladTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mail/mailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mail/MailSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +62,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="kurs" />
@@ -159,8 +149,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest.testSort" />
         <item itemvalue="JUnit.MainTest.testSortByPrice" />
         <item itemvalue="JUnit.MainTest.testInsertDB" />
@@ -243,7 +233,7 @@
       <workItem from="1668106999023" duration="3312000" />
       <workItem from="1668110323294" duration="792000" />
       <workItem from="1668262862173" duration="273000" />
-      <workItem from="1668620833864" duration="1443000" />
+      <workItem from="1668620833864" duration="3203000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -413,7 +403,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668089430778</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="solve_9">
+      <created>1668785550322</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1668785550322</updated>
+    </task>
+    <task id="LOCAL-00026" summary="solve_9">
+      <created>1668785614305</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1668785614305</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -5,7 +5,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-public class mailSender {
+public class MailSender {
     public static void sendMessage(String error) throws Exception{
 
         Properties properties = new Properties();
