@@ -12,16 +12,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.testfx.api.FxToolkit;
-import org.testfx.framework.junit5.ApplicationTest;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.testfx.framework.junit.ApplicationTest;
 import java.util.logging.Logger;
-
-import static java.sql.JDBCType.NULL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.testfx.api.FxAssert.verifyThat;
-import static org.testfx.matcher.control.TextMatchers.hasText;
 
 
 public class MainTest extends ApplicationTest {
@@ -30,7 +23,7 @@ public class MainTest extends ApplicationTest {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/main/Main.fxml"));
         Scene scene = new Scene(root);
         stage.setResizable(false);
         stage.setScene(scene);
@@ -51,113 +44,102 @@ public class MainTest extends ApplicationTest {
     @Test
     public void testCreateSalad(){
         Salad.getList().clear();
-        clickOn("#Create salad");
-        sleep(600);
-        clickOn("#Name").write("Dream");
-        sleep(600);
-        clickOn("#id").write("013");
-        sleep(600);
-        clickOn("#Confirm");
-        verifyThat("#companyName",hasText("Company Name: Emirates Airline"));
-        String example =  Salad.getBoxForm().toString() + Salad.getID().toString();
+        clickOn("#CreateSalad");
+        sleep(1500);
+        clickOn("#boxField").write("Dream");
+        sleep(1500);
+        clickOn("#idField").write("013");
+        sleep(1000);
+        clickOn("#ConfirmSalad");
+        sleep(1500);
+        String example =  " Its name: " + Salad.getInstance().getBoxForm() + " Its ID: " + Salad.getInstance().getId();
         assertEquals(" Its name: " + "Dream" +
-                " Its ID: " + 013 ,example);
+                " Its ID: " + 13 ,example);
     }
 
     @Test
     public void testCreateVegetable() {
         Salad.getList().clear();
-        clickOn("#Create vegetable");
-        sleep(600);
-        clickOn("#Name").write("Onion");
-        sleep(600);
-        clickOn("#Price").write("13");
-        sleep(600);
-        clickOn("#Weight").write("9");
-        sleep(600);
-        clickOn("#Kalory").write("10");
-        sleep(600);
-        clickOn("#ID").write("013");
-        sleep(600);
-        clickOn("#Confirm");
-        sleep(600);
+        clickOn("#CreateVegetable");
+        sleep(1500);
+        clickOn("#nameField").write("Onion");
+        sleep(1500);
+        clickOn("#priceField").write("13");
+        sleep(1500);
+        clickOn("#weightField").write("9");
+        sleep(1500);
+        clickOn("#kaloryField").write("10");
+        sleep(1500);
+        clickOn("#qrField").write("013");
+        sleep(1500);
+        clickOn("#ConfirmVegetable");
+        sleep(1500);
         String example =  Salad.getList().get(0).toString();
 
-        assertEquals(" QR code: " + 13 +
-                " Name of vegetable: " + "Onion" +
-                " Kalory concept: " + 10 +
-                " Price of vegetable: " + 13 +
-                " Weight of vegetable: " + 9 ,example);
+        assertEquals("QR code: " + 13 +
+                "  Name of vegetable: " + "Onion" +
+                "  Kalory concept: " + 10 +
+                "  Price of vegetable: " + 13 +
+                "  Weight of vegetable: " + 9 ,example);
     }
 
     @Test
     public void testFindByKalory() {
         Salad.getList().clear();
-        clickOn("#asc");
-        clickOn("#Create vegetable");
-        sleep(600);
-        clickOn("#Name").write("Onion");
-        sleep(600);
-        clickOn("#Price").write("13");
-        sleep(600);
-        clickOn("#Weight").write("9");
-        sleep(600);
-        clickOn("#Kalory").write("10");
-        sleep(600);
-        clickOn("#ID").write("013");
-        sleep(600);
-        clickOn("#Confirm");
-        sleep(600);
-        clickOn("#Create vegetable");
-        sleep(600);
-        clickOn("#Name").write("Carrot");
-        sleep(600);
-        clickOn("#Price").write("33");
-        sleep(600);
-        clickOn("#Weight").write("20");
-        sleep(600);
-        clickOn("#Kalory").write("50");
-        sleep(600);
-        clickOn("#ID").write("033");
-        sleep(600);
-        clickOn("#Confirm");
-        sleep(600);
-        clickOn("#Find by kalory");
-        sleep(600);
-        clickOn("#Kalory maximum").write("55");
-        sleep(600);
-        clickOn("#Kalory minimum").write("30");
-        sleep(600);
-        clickOn("#Confirm");
-        sleep(600);
+        Salad.getInstance().addVegetables(new Vegetables("Onion",13,9,10,13),logger);
+        Salad.getInstance().addVegetables(new Vegetables("Carrot",33,20,50,33),logger);
+
+        clickOn("#FindByKalory");
+        sleep(1500);
+        clickOn("#maxField").write("55");
+        sleep(1500);
+        clickOn("#minField").write("30");
+        sleep(1500);
+        clickOn("#ConfirmSearch");
+        sleep(1500);
 
         String example =  Salad.getList().get(1).toString();
 
-        assertEquals(" QR code: " + 033 +
-                " Name of vegetable: " + "Carrot" +
-                " Kalory concept: " + 50 +
-                " Price of vegetable: " + 33 +
-                " Weight of vegetable: " + 20 ,example);
+        assertEquals("QR code: " + 33 +
+                "  Name of vegetable: " + "Carrot" +
+                "  Kalory concept: " + 50 +
+                "  Price of vegetable: " + 33 +
+                "  Weight of vegetable: " + 20 ,example);
 
     }
 
     @Test
     public void testFlush() {
         Salad.getList().clear();
-        clickOn("#asc");
-        clickOn("#Clear all data");
-        sleep(600);
-        String actual = Salad.getList().get(0).toString();
-        assertEquals(NULL,actual);
+        clickOn("#Flush");
+        sleep(1500);
+        String actual = Salad.getInstance().getBoxForm();
+        assertEquals("Unknown",actual);
+    }
+
+
+    @Test
+    public void testSortByPrice(){
+        Salad.getList().clear();
+        Salad.getInstance().addVegetables(new Vegetables("Garlic",24,15,35,22),logger);
+        Salad.getInstance().addVegetables(new Vegetables("Onion",13,9,10,13),logger);
+        Salad.getInstance().addVegetables(new Vegetables("Carrot",33,20,50,33),logger);
+        sleep(1500);
+        String expected = Salad.getList().get(1).toString() + Salad.getList().get(0).toString() + Salad.getList().get(2).toString(),actual = "";
+        clickOn("#Sort");
+        for(int i = 0; i < Salad.getList().size();i++){
+            actual += Salad.getList().get(i).toString();
+        }
+        sleep(1500);
+        assertEquals(expected,actual);
     }
 
     @Test
     public void testReadDB() {
         Salad.getList().clear();
-        clickOn("#asc");
-        String expected = new Vegetables("Onion",71, 12,34,011).toString();
-        clickOn("#Read from database");
-        sleep(600);
+        clickOn("#readDB");
+        String expected = new Vegetables("Onion",71, 12,34,11).toString();
+        sleep(1500);
         String actual = Salad.getList().get(0).toString();
         assertEquals(expected,actual);
     }
@@ -165,22 +147,27 @@ public class MainTest extends ApplicationTest {
     @Test
     public void testInsertDB() {
         Salad.getList().clear();
-        clickOn("#asc");
-        List<Vegetables> vegetables = Salad.getList();
-        vegetables.add(new Vegetables("Onion",71, 12,34,011));
-        clickOn("#Save to database");
-        sleep(600);
-        clickOn("#Read from database");
-        sleep(600);
+        clickOn("#CreateVegetable");
+        sleep(1500);
+        clickOn("#nameField").write("Onion");
+        sleep(1500);
+        clickOn("#priceField").write("71");
+        sleep(1500);
+        clickOn("#weightField").write("12");
+        sleep(1500);
+        clickOn("#kaloryField").write("34");
+        sleep(1500);
+        clickOn("#qrField").write("11");
+        sleep(1500);
+        clickOn("#ConfirmVegetable");
+        sleep(1500);
+        clickOn("#saveDB");
+        sleep(1500);
+        String expected = Salad.getInstance().getList().get(0).toString();
+        clickOn("#readDB");
+        sleep(1500);
 
-        String actual = null,expected = null;
-
-        for(int i = 0; i < vegetables.size(); i++){
-            expected += vegetables.get(i).toString();
-            actual += vegetables.getList().get(i).toString();
-        }
-        assertEquals(expected,actual);
+        assertEquals(expected,Salad.getInstance().getList().get(0).toString());
     }
-
 
 }

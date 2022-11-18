@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b344842c-d1e0-4f2e-90a6-27bd726a364e" name="Changes" comment="solve_9">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/loadui_testFx.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/testfx_core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/testfx_junit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/testfx_junit5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kurs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kurs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Salad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Salad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SaladTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SaladTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,24 +73,9 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="base.Database" />
-      <module name="kurs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="kurs" />
-      <option name="PROGRAM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml" />
       <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
@@ -105,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaladTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.testInsertDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kurs" />
       <extension name="coverage">
         <pattern>
@@ -114,13 +111,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SaladTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="test.MainTest" />
+      <option name="METHOD_NAME" value="testInsertDB" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test in kurs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.testSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kurs" />
       <extension name="coverage">
         <pattern>
@@ -129,25 +127,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="test.MainTest" />
+      <option name="METHOD_NAME" value="testSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testSortByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kurs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.MainTest" />
+      <option name="METHOD_NAME" value="testSortByPrice" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Database" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.MainTest" />
-      <item itemvalue="JUnit.SaladTest" />
-      <item itemvalue="JUnit.test in kurs" />
+      <item itemvalue="JUnit.MainTest.testInsertDB" />
+      <item itemvalue="JUnit.MainTest.testSort" />
+      <item itemvalue="JUnit.MainTest.testSortByPrice" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.SaladTest" />
-        <item itemvalue="JUnit.test in kurs" />
-        <item itemvalue="Application.Database" />
+        <item itemvalue="JUnit.MainTest.testSort" />
+        <item itemvalue="JUnit.MainTest.testSortByPrice" />
+        <item itemvalue="JUnit.MainTest.testInsertDB" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +239,11 @@
       <workItem from="1667931810463" duration="3800000" />
       <workItem from="1668011344025" duration="312000" />
       <workItem from="1668011749192" duration="2929000" />
-      <workItem from="1668016071952" duration="8425000" />
+      <workItem from="1668016071952" duration="11998000" />
+      <workItem from="1668106999023" duration="3312000" />
+      <workItem from="1668110323294" duration="792000" />
+      <workItem from="1668262862173" duration="273000" />
+      <workItem from="1668620833864" duration="1443000" />
     </task>
     <task id="LOCAL-00001" summary="solve">
       <created>1666955199679</created>
@@ -386,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668088499150</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="solve_9">
+      <created>1668089430778</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1668089430778</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

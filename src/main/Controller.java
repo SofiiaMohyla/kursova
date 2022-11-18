@@ -216,6 +216,11 @@ public class Controller {
         }catch(NumberFormatException numb){
             QR = 1111;
         }
+        nameField.clear();
+        priceField.clear();
+        weightField.clear();
+        kaloryField.clear();
+        qrField.clear();
 
         salad.addVegetables(new Vegetables(name,price,weight,kalory,QR),logger);
 

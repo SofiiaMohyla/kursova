@@ -21,6 +21,36 @@ public class Salad {
         return instance;
     }
 
+
+    public int size() {
+        return listOfVegetables.size();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getBoxForm() {
+        return BoxForm;
+    }
+
+    public void setBoxForm(String boxForm) {
+        BoxForm = boxForm;
+    }
+
+    public void getListOfVegetables(Logger logger) {
+        logger.finest("Виводимо список овочів у нашому салаті. Є вийняток, коли немає доданих овочів у салат.");
+        for (int i = 0; i < listOfVegetables.size(); i++) {
+            System.out.println("\nQR code: " + listOfVegetables.get(i).getQR() + "\nName of vegetable: " + listOfVegetables.get(i).getName() + "\nKalory concept: " + listOfVegetables.get(i).getKalory()
+                    + "\nPrice of vegetable: " + listOfVegetables.get(i).getPrice() + "\nWeight of vegetable: " + listOfVegetables.get(i).getWeight());
+        }
+    }
+
+
     public void addVegetables(Vegetables vegetables,Logger logger) {
         logger.finer("Додаємо овоч до салату. Не можливо вибрати тип, який не існує");
         this.listOfVegetables.add(vegetables);
@@ -89,49 +119,6 @@ public class Salad {
         return total;
     }
 
-    public void delete(int index, Logger logger) {
-        logger.finer("Видаляємо овоч з салату за вказаним індексом");
-        listOfVegetables.remove(index);
-    }
-
-    public int size() {
-        return listOfVegetables.size();
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getBoxForm() {
-        return BoxForm;
-    }
-
-    public void setBoxForm(String boxForm) {
-        BoxForm = boxForm;
-    }
-
-    public void getListOfVegetables(Logger logger) {
-        logger.finest("Виводимо список овочів у нашому салаті. Є вийняток, коли немає доданих овочів у салат.");
-        for (int i = 0; i < listOfVegetables.size(); i++) {
-            System.out.println("\nQR code: " + listOfVegetables.get(i).getQR() + "\nName of vegetable: " + listOfVegetables.get(i).getName() + "\nKalory concept: " + listOfVegetables.get(i).getKalory()
-                    + "\nPrice of vegetable: " + listOfVegetables.get(i).getPrice() + "\nWeight of vegetable: " + listOfVegetables.get(i).getWeight());
-        }
-    }
-
-    public void getUniqueId(Logger logger) {
-        logger.finest("Виводимо список овочів у нашому салаті з унікальними кодами . Є вийняток, коли немає доданих овочів у салат.");
-        int i;
-        for (i = 0; i < listOfVegetables.size(); i++) {
-            System.out.println("\nUnique code: " + i + "\nName of vegetable: " + listOfVegetables.get(i).getName());
-            ;
-        }
-    }
-
-
     public void flush() {
         this.id = 0;
         this.BoxForm = "Unknown";
@@ -142,4 +129,19 @@ public class Salad {
     public static List<Vegetables> getList() {
         return listOfVegetables;
     }
+
+
+    //    public void delete(int index, Logger logger) {
+//        logger.finer("Видаляємо овоч з салату за вказаним індексом");
+//        listOfVegetables.remove(index);
+//    }
+
+//    public void getUniqueId(Logger logger) {
+//        logger.finest("Виводимо список овочів у нашому салаті з унікальними кодами . Є вийняток, коли немає доданих овочів у салат.");
+//        int i;
+//        for (i = 0; i < listOfVegetables.size(); i++) {
+//            System.out.println("\nUnique code: " + i + "\nName of vegetable: " + listOfVegetables.get(i).getName());
+//            ;
+//        }
+//    }
 }

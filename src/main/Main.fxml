@@ -29,19 +29,19 @@
          <image>
             <Image url="@photo1.jpg" />
          </image></ImageView>
-      <Button layoutX="747.0" layoutY="520.0" mnemonicParsing="false" onAction="#readDB" prefHeight="46.0" prefWidth="249.0" text="Read from database">
+      <Button fx:id="readDB" layoutX="747.0" layoutY="520.0" mnemonicParsing="false" onAction="#readDB" prefHeight="46.0" prefWidth="249.0" text="Read from database">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="1024.0" layoutY="521.0" mnemonicParsing="false" onAction="#writeDB" prefHeight="45.0" prefWidth="237.0" text="Save to database">
+      <Button fx:id="saveDB" layoutX="1024.0" layoutY="521.0" mnemonicParsing="false" onAction="#writeDB" prefHeight="45.0" prefWidth="237.0" text="Save to database">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="396.0" layoutY="681.0" mnemonicParsing="false" onAction="#sortByPrice" prefHeight="45.0" prefWidth="290.0" text="Sort vegetables by price">
+      <Button fx:id="Sort" layoutX="396.0" layoutY="681.0" mnemonicParsing="false" onAction="#sortByPrice" prefHeight="45.0" prefWidth="290.0" text="Sort vegetables by price">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="395.0" layoutY="746.0" mnemonicParsing="false" onAction="#flushSalad" prefHeight="45.0" prefWidth="290.0" text="Clear all data">
+      <Button fx:id="Flush" layoutX="395.0" layoutY="746.0" mnemonicParsing="false" onAction="#flushSalad" prefHeight="45.0" prefWidth="290.0" text="Clear all data">
          <font>
             <Font size="24.0" />
          </font></Button>
@@ -129,7 +129,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="164.0" layoutY="143.0" mnemonicParsing="false" onAction="#submitEditSalad" prefHeight="38.0" prefWidth="102.0" text="Confirm" textFill="#bc1e1e">
+            <Button fx:id="ConfirmSalad" layoutX="164.0" layoutY="143.0" mnemonicParsing="false" onAction="#submitEditSalad" prefHeight="38.0" prefWidth="102.0" text="Confirm" textFill="#bc1e1e">
                <font>
                   <Font size="18.0" />
                </font>
@@ -155,7 +155,7 @@
             </Label>
             <TextField fx:id="maxField" layoutX="170.0" layoutY="56.0" prefHeight="33.0" prefWidth="138.0" />
             <TextField fx:id="minField" layoutX="170.0" layoutY="101.0" prefHeight="30.0" prefWidth="138.0" />
-            <Button layoutX="223.0" layoutY="137.0" mnemonicParsing="false" onAction="#submitFindByKalory" prefHeight="38.0" prefWidth="89.0" text="Confirm" textFill="#d02121">
+            <Button fx:id="ConfirmSearch" layoutX="223.0" layoutY="137.0" mnemonicParsing="false" onAction="#submitFindByKalory" prefHeight="38.0" prefWidth="89.0" text="Confirm" textFill="#d02121">
                <font>
                   <Font size="18.0" />
                </font>
@@ -199,7 +199,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="175.0" layoutY="280.0" mnemonicParsing="false" onAction="#submitCreateVegetable" prefHeight="35.0" prefWidth="102.0" text="Confirm" textFill="#da1f1f">
+            <Button fx:id="ConfirmVegetable" layoutX="175.0" layoutY="280.0" mnemonicParsing="false" onAction="#submitCreateVegetable" prefHeight="35.0" prefWidth="102.0" text="Confirm" textFill="#da1f1f">
                <font>
                   <Font size="18.0" />
                </font>
@@ -211,17 +211,17 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="400.0" layoutY="551.0" mnemonicParsing="false" onAction="#enableKalorySearch" prefHeight="46.0" prefWidth="290.0" text="Find by kalory">
+      <Button fx:id="FindByKalory" layoutX="400.0" layoutY="551.0" mnemonicParsing="false" onAction="#enableKalorySearch" prefHeight="46.0" prefWidth="290.0" text="Find by kalory">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="540.0" layoutY="399.0" mnemonicParsing="false" onAction="#enableSaladEdit" prefHeight="31.0" prefWidth="318.0" text="Create salad">
+      <Button fx:id="CreateSalad" layoutX="540.0" layoutY="399.0" mnemonicParsing="false" onAction="#enableSaladEdit" prefHeight="31.0" prefWidth="318.0" text="Create salad">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="397.0" layoutY="617.0" mnemonicParsing="false" onAction="#enableVegetableEdit" prefHeight="46.0" prefWidth="290.0" text="Create vegetable">
+      <Button fx:id="CreateVegetable" layoutX="397.0" layoutY="617.0" mnemonicParsing="false" onAction="#enableVegetableEdit" prefHeight="46.0" prefWidth="290.0" text="Create vegetable">
          <font>
             <Font size="24.0" />
          </font>

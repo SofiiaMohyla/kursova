@@ -93,35 +93,6 @@ class SaladTest {
     }
 
     @Test
-    void testDelete1() {
-        logger.setUseParentHandlers(false);
-        test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192), logger);
-        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999), logger);
-        test.getList().remove(1);
-        assertEquals(new Vegetables("Garlic", 10, 4, 10, 192).toString(),test.getList().get(0).toString());
-    }
-
-    @Test
-    void testDelete2() {
-        logger.setUseParentHandlers(false);
-        test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192), logger);
-        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999), logger);
-        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122), logger);
-        test.getList().remove(2);
-        List<Vegetables> found_vegetables = new ArrayList<>();
-        found_vegetables.add(new Vegetables("Garlic", 10, 4, 10, 192));
-        found_vegetables.add(new Vegetables("Cabbage", 11, 10, 20, 999));
-        String actual = null,expected = null;
-        for(int i = 0; i < found_vegetables.size();i++){
-            actual += test.getList().get(i).toString();
-            expected += found_vegetables.get(i).toString();
-        }
-        assertEquals(expected,actual);
-    }
-
-    @Test
     void testSortByPrice() {
         logger.setUseParentHandlers(false);
         test.getList().clear();
@@ -160,22 +131,6 @@ class SaladTest {
         assertEquals("Salad data flushed!",outputStreamCaptor.toString().trim());
     }
 
-
-    @Test
-    void testGetUniqueId() {
-        logger.setUseParentHandlers(false);
-        test.getList().clear();
-        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
-
-        System.setOut(new PrintStream(outputStreamCaptor));
-        test.getUniqueId(logger);
-        System.setOut(new PrintStream(standardOut));
-
-        String expected = "\nUnique code: " + 0 + "\nName of vegetable: " + test.getList().get(0).getName();
-        assertEquals( expected.trim() ,outputStreamCaptor.toString().trim());
-    }
-
-
     @Test
     void testGetListOfVegetables() {
         logger.setUseParentHandlers(false);
@@ -195,4 +150,48 @@ class SaladTest {
 
         assertEquals(outputStreamSecond.toString().trim(),outputStreamCaptor.toString().trim());
     }
+
+    //    @Test
+//    void testDelete1() {
+//        logger.setUseParentHandlers(false);
+//        test.getList().clear();
+//        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192), logger);
+//        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999), logger);
+//        test.getList().remove(1);
+//        assertEquals(new Vegetables("Garlic", 10, 4, 10, 192).toString(),test.getList().get(0).toString());
+//    }
+//
+//    @Test
+//    void testDelete2() {
+//        logger.setUseParentHandlers(false);
+//        test.getList().clear();
+//        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192), logger);
+//        test.addVegetables(new Vegetables("Cabbage", 11, 10, 20, 999), logger);
+//        test.addVegetables(new Vegetables("Onion", 12, 3, 13, 122), logger);
+//        test.getList().remove(2);
+//        List<Vegetables> found_vegetables = new ArrayList<>();
+//        found_vegetables.add(new Vegetables("Garlic", 10, 4, 10, 192));
+//        found_vegetables.add(new Vegetables("Cabbage", 11, 10, 20, 999));
+//        String actual = null,expected = null;
+//        for(int i = 0; i < found_vegetables.size();i++){
+//            actual += test.getList().get(i).toString();
+//            expected += found_vegetables.get(i).toString();
+//        }
+//        assertEquals(expected,actual);
+//    }
+
+    //    @Test
+//    void testGetUniqueId() {
+//        logger.setUseParentHandlers(false);
+//        test.getList().clear();
+//        test.addVegetables(new Vegetables("Garlic", 10, 4, 10, 192),logger);
+//
+//        System.setOut(new PrintStream(outputStreamCaptor));
+//        test.getUniqueId(logger);
+//        System.setOut(new PrintStream(standardOut));
+//
+//        String expected = "\nUnique code: " + 0 + "\nName of vegetable: " + test.getList().get(0).getName();
+//        assertEquals( expected.trim() ,outputStreamCaptor.toString().trim());
+//    }
+
 }
