@@ -21,7 +21,6 @@ public class Salad {
         return instance;
     }
 
-
     public int size() {
         return listOfVegetables.size();
     }
