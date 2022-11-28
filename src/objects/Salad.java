@@ -73,24 +73,6 @@ public class Salad {
     }
 
 
-    //за спаданням
-//    public static void sortByPrice() {
-//        Collections.sort(listOfVegetables, new Comparator() {
-//            public int compare(Object o1, Object o2) {
-//                Integer x1 = ((Vegetables) o1).getPrice();
-//                Integer x2 = ((Vegetables) o2).getPrice();
-//                int sComp = x2.compareTo(x1);
-//                if (sComp < 0) {
-//                    return sComp;
-//                }
-//                x1 = ((Vegetables) o1).getPrice();
-//                x2 = ((Vegetables) o2).getPrice();
-//                return x2.compareTo(x1);
-//            }
-//        });
-//    }
-
-
     public List<Vegetables> findByKalory(int min, int max, Logger logger) {
         logger.fine("Фільтруємо наші овочі у салаті за вмістом калорій , можливим є повернення пустого списку.");
         List<Vegetables> found_vegetables = new ArrayList<>();
