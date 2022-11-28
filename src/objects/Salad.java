@@ -55,6 +55,7 @@ public class Salad {
         this.listOfVegetables.add(vegetables);
     }
 
+
     //за зростанням
     public static void sortByPrice() {
         Collections.sort(listOfVegetables, new Comparator() {
